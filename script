@@ -1,0 +1,10 @@
+(function(){
+  var _id = 309847;
+  var isHome = $('a[title="我的卡包"]').html();
+  var _temp = isHome ? "" : $('span[title]:first').attr('title').slice(4);
+  var _name = 'INSERT FILE NAME HERE 将此单引号内的内容替换为需要下载的文件名称';
+  var _path = encodeURIComponent(_temp + '/' + _name);
+  var _link = 'https://pcs.baidu.com/rest/2.0/pcs/file?method=download&app_id='+_id+'&path=' + _path;
+  console.log('下载地址为: ');
+  console.log('%c%s', 'color: #66ccff; background-color: #66ccff;' , _link);
+})();
